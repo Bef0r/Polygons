@@ -20,3 +20,5 @@ C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\Polyg
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\ref\Polygons.dll
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\Polygons.pdb
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\Polygons.genruntimeconfig.cache
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\Polygons.Resources.MainWindowStrings.resources
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\Polygons.csproj.GenerateResource.cache
