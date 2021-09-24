@@ -20,7 +20,7 @@
         <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Grid.RowSpan = "3" />
         <Label x:Name="numberOfVerticesOfPolygonLabel" Content="{x:Static resources:MainWindowStrings.NumberOfVerticesOfPolygonLabelText}" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,30,0,0" />
         <TextBox x:Name="polygonVertexTextBox" HorizontalAlignment="Left" Margin="10,5,0,5" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
-        <Button x:Name="DrawPolygonButton" Content="{x:Static resources:MainWindowStrings.CreatePoligonButtonContent}" Margin="10,0,30,0" Grid.Row="2" Click="DrawPolygonButton_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Stretch" />
-        <Canvas x:Name="myCanvas" Grid.Column="2" Grid.Row="0" Grid.RowSpan = "3"/>
+        <Button x:Name="DrawPolygonButton" Content="{x:Static resources:MainWindowStrings.CreatePoligonButtonContent}" Margin="10,0,0,0" Grid.Row="2" Click="DrawPolygonButton_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="119" />
+        <Canvas x:Name="myCanvas" Grid.Column="2" Grid.Row="0" Grid.RowSpan = "3" HorizontalAlignment="Left" Width="636"/>
     </Grid>
 </Window>
