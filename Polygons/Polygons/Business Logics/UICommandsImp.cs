@@ -13,7 +13,7 @@ namespace Polygons.Business_Logics
     {
         public CanvasViewModel generateNewPolygon(NewPolygonParameters newPolygonParameters)
         {
-            Polygon polygons = new PolygonGenerator(newPolygonParameters.numberOfVerticesOfPolygon).setMaximumXAxisValue(newPolygonParameters.canvasHeight).setMaximumYAxisValue(newPolygonParameters.canvasHeight).build();
+            Polygon polygons = new PolygonGenerator(newPolygonParameters.numberOfVerticesOfPolygon).setMaximumXAxisValue(newPolygonParameters.canvasWidth).setMaximumYAxisValue(newPolygonParameters.canvasHeight).build();
             Canvas canvas = new Canvas();
             canvas.Children.Add(polygons);
             return new CanvasViewModel(canvas);
