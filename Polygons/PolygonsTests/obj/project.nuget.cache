@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "gWSEwKpZgHyMBrOxCrBVDvVlqwcgcZwrehJG0xgktXvdM27E5VPElayV5S2bDodbmybaLG4Qv5UcLU7ssrkrQA==",
-  "success": false,
+  "dgSpecHash": "Yd9R1DqG7OtsAtn1aPk9mG3u3ASnmH8XwJp7Ani8SkYHro5UhGGONU9ufjvPtDER5J/IPPOQUTTEjjjR5t4QvA==",
+  "success": true,
   "projectFilePath": "C:\\Users\\albma\\Desktop\\Polygons\\Polygons\\PolygonsTests\\PolygonsTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\albma\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
@@ -93,15 +93,5 @@
     "C:\\Users\\albma\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\albma\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Polygons is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project Polygons supports: net5.0-windows7.0 (.NETCoreApp,Version=v5.0)",
-      "libraryId": "Polygons",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  "logs": []
 }

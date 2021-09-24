@@ -5,7 +5,6 @@ C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\net5.0-windows\Polyg
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\net5.0-windows\Polygons.dll
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\net5.0-windows\ref\Polygons.dll
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\net5.0-windows\Polygons.pdb
-C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\Polygons.csproj.AssemblyReference.cache
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\MainWindow.g.cs
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\App.g.cs
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\net5.0-windows\Polygons_MarkupCompile.cache
