@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Polygons.Models.Shapes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace Polygons
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void DrawPolygonButton_Click(object sender, RoutedEventArgs e)
+        {
+            Polygon polygon = new PolygonGenerator(5).build();
+            this.myCanvas.Children.Add(polygon);
         }
     }
 }
