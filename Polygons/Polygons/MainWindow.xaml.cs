@@ -1,4 +1,8 @@
-﻿using Polygons.Models.Shapes;
+﻿using Polygons.Business_Logics;
+using Polygons.Helper;
+using Polygons.Models.Polygons;
+using Polygons.Models.Shapes;
+using Polygons.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,15 +25,19 @@ namespace Polygons
     /// </summary>
     public partial class MainWindow : Window
     {
+        private IUICommands commands;
         public MainWindow()
         {
             InitializeComponent();
+            commands = new UICommandsImp();
         }
 
         private void DrawPolygonButton_Click(object sender, RoutedEventArgs e)
         {
-            Polygon polygon = new PolygonGenerator(5).build();
-            this.myCanvas.Children.Add(polygon);
+            if (InputChecker.NumberOfVerticesOfPolygonChecker(polygonVertexTextBox.Text)) {
+                CanvasViewModel canvasViewmodel = commands.generateNewPolygon(new NewPolygonParameters(Convert.ToInt32(this.myCanvas.ActualWidth), Convert.ToInt32(this.myCanvas.ActualHeight), Convert.ToInt32(polygonVertexTextBox.Text))); ;
+                this.myCanvas.Children.Add(canvasViewmodel.myCanvas);
+            }
         }
     }
 }
