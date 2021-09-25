@@ -1,10 +1,13 @@
-﻿using Polygons.Business_Logics;
+﻿using Nancy.Json;
+using Polygons.Business_Logics;
 using Polygons.Helper;
+using Polygons.Models;
 using Polygons.Models.Polygons;
 using Polygons.Models.Shapes;
 using Polygons.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,8 +35,6 @@ namespace Polygons
             commands = new UICommandsImp();
         }
 
-
-
         private void DrawPolygonButton_Click(object sender, RoutedEventArgs e)
         {
             if (InputChecker.NumberOfVerticesOfPolygonChecker(polygonVertexTextBox.Text))
@@ -59,6 +60,18 @@ namespace Polygons
             {
                 this.MainWindowErrorLabel.Text = "";
             }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            MainWindowSettings mainWindowSettings = new MainWindowSettings(Convert.ToInt32(this.myCanvas.ActualWidth), Convert.ToInt32(this.myCanvas.ActualHeight), isWindowFullScreen());
+            commands.saveMainWindowSettings(mainWindowSettings);
+        }
+
+        protected Boolean isWindowFullScreen()
+        {
+            return this.WindowState == WindowState.Maximized ? true : false;
         }
     }
 }
