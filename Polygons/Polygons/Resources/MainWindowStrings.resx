@@ -120,6 +120,9 @@
   <data name="CreatePoligonButtonContent" xml:space="preserve">
     <value>Létrehozás</value>
   </data>
+  <data name="InvalidInputFromMainWindow" xml:space="preserve">
+    <value>Hibás input, az input csak szám lehet és nagyobb kettőnél</value>
+  </data>
   <data name="NumberOfVerticesOfPolygonLabelText" xml:space="preserve">
     <value>Csúcsok száma</value>
   </data>

@@ -70,6 +70,15 @@ namespace Polygons.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hibás input, az input csak szám lehet és nagyobb kettőnél.
+        /// </summary>
+        public static string InvalidInputFromMainWindow {
+            get {
+                return ResourceManager.GetString("InvalidInputFromMainWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Csúcsok száma.
         /// </summary>
         public static string NumberOfVerticesOfPolygonLabelText {
