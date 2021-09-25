@@ -34,9 +34,28 @@ namespace Polygons
 
         private void DrawPolygonButton_Click(object sender, RoutedEventArgs e)
         {
-            if (InputChecker.NumberOfVerticesOfPolygonChecker(polygonVertexTextBox.Text)) {
+            if (InputChecker.NumberOfVerticesOfPolygonChecker(polygonVertexTextBox.Text))
+            {
+                clearInputErrorTextOnUI();
                 CanvasViewModel canvasViewmodel = commands.generateNewPolygon(new NewPolygonParameters(Convert.ToInt32(this.myCanvas.ActualWidth), Convert.ToInt32(this.myCanvas.ActualHeight), Convert.ToInt32(polygonVertexTextBox.Text))); ;
                 this.myCanvas.Children.Add(canvasViewmodel.myCanvas);
+            }
+            else
+            {
+                showInputErrorTextOnUI();
+            }
+        }
+
+        private void showInputErrorTextOnUI()
+        {
+            this.MainWindowErrorLabel.Text = Polygons.Resources.MainWindowStrings.InvalidInputFromMainWindow;
+        }
+
+        private void clearInputErrorTextOnUI()
+        {
+            if (this.MainWindowErrorLabel.Text != "")
+            {
+                this.MainWindowErrorLabel.Text = "";
             }
         }
     }
