@@ -13,9 +13,9 @@ namespace Polygons.Business_Logics
     {
         public CanvasViewModel generateNewPolygon(NewPolygonParameters newPolygonParameters)
         {
-            Polygon polygons = new PolygonGenerator(newPolygonParameters.numberOfVerticesOfPolygon).setMaximumXAxisValue(newPolygonParameters.canvasWidth).setMaximumYAxisValue(newPolygonParameters.canvasHeight).build();
+            Polygon newPolygon = new PolygonGenerator(newPolygonParameters.numberOfVerticesOfPolygon).setMaximumXAxisValue(newPolygonParameters.canvasWidth).setMaximumYAxisValue(newPolygonParameters.canvasHeight).build();
             Canvas canvas = new Canvas();
-            canvas.Children.Add(polygons);
+            canvas.Children.Add(newPolygon);
             return new CanvasViewModel(canvas);
         }
     }
