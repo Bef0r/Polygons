@@ -11,7 +11,6 @@ C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygo
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons_MarkupCompile.lref
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.g.resources
-C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.Resources.MainWindowStrings.resources
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.csproj.GenerateResource.cache
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.AssemblyInfoInputs.cache
@@ -20,3 +19,4 @@ C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygo
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.dll
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.pdb
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.genruntimeconfig.cache
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.Resources.MainWindowStrings.resources

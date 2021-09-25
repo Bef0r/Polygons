@@ -32,6 +32,8 @@ namespace Polygons
             commands = new UICommandsImp();
         }
 
+
+
         private void DrawPolygonButton_Click(object sender, RoutedEventArgs e)
         {
             if (InputChecker.NumberOfVerticesOfPolygonChecker(polygonVertexTextBox.Text))
