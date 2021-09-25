@@ -6,6 +6,10 @@ namespace Polygons.Models.Shapes
 {
     public class PolygonGenerator
     {
+        private const int DEFAULT_MAXIMUM_X_COORDINATE = 450;
+        private const int DEFAULT_MAXIMUM_Y_COORDINATE = 250;
+        private const int DEFAULT_MARGIN__VALUE = 10;
+
         private int maximumXCoordinateValue;
         private int maximumYCoordinateValue;
         private int minimumXCoordinateValue;
@@ -17,35 +21,23 @@ namespace Polygons.Models.Shapes
         {
             this.coordinateGenerator = new Random();
             this.numberOfVerticesOfPolygon = numberOfVerticesOfPolygon;
-            maximumXCoordinateValue = 450;
-            maximumYCoordinateValue = 250;
-            minimumXCoordinateValue = 10;
-            minimumYCoordinateValue = 10;
+            maximumXCoordinateValue = DEFAULT_MAXIMUM_X_COORDINATE;
+            maximumYCoordinateValue = DEFAULT_MAXIMUM_Y_COORDINATE;
+            minimumXCoordinateValue = DEFAULT_MARGIN__VALUE;
+            minimumYCoordinateValue = DEFAULT_MARGIN__VALUE;
         }
 
 
         #region setters
         public PolygonGenerator setMaximumXAxisValue(int maximumXValue)
         {
-            this.maximumXCoordinateValue = maximumXValue;
+            this.maximumXCoordinateValue = maximumXValue - DEFAULT_MARGIN__VALUE;
             return this;
         }
 
         public PolygonGenerator setMaximumYAxisValue(int maximumYValue)
         {
-            this.maximumYCoordinateValue = maximumYValue;
-            return this;
-        }
-
-        public PolygonGenerator setMinimumXAxisValue(int minimumXValue)
-        {
-            this.minimumXCoordinateValue = minimumXValue;
-            return this;
-        }
-
-        public PolygonGenerator setMinimumYAxisValue(int minimumYValue)
-        {
-            this.minimumYCoordinateValue = minimumYValue;
+            this.maximumYCoordinateValue = maximumYValue - DEFAULT_MARGIN__VALUE;
             return this;
         }
 
