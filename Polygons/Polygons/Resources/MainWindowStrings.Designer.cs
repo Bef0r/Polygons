@@ -88,6 +88,15 @@ namespace Polygons.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tárolás.
+        /// </summary>
+        public static string StorageButtonContent {
+            get {
+                return ResourceManager.GetString("StorageButtonContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Polygons.
         /// </summary>
         public static string WindowTitle {
