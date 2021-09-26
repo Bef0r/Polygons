@@ -82,6 +82,9 @@ namespace Polygons
             }
         }
 
-
+        private void storageButton_Click(object sender, RoutedEventArgs e)
+        {
+            commands.storageData();
+        }
     }
 }
