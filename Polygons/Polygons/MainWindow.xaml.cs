@@ -18,6 +18,7 @@ namespace Polygons
         {
             InitializeComponent();
             commands = new UICommandsImp();
+            setupMainWindowSettings();
         }
 
         private void DrawPolygonButton_Click(object sender, RoutedEventArgs e)
@@ -50,7 +51,7 @@ namespace Polygons
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-            MainWindowSettings mainWindowSettings = new MainWindowSettings(Convert.ToInt32(this.myCanvas.ActualWidth), Convert.ToInt32(this.myCanvas.ActualHeight), isWindowFullScreen());
+            MainWindowSettings mainWindowSettings = new MainWindowSettings(Convert.ToInt32(this.myCanvas.ActualHeight), Convert.ToInt32(this.myCanvas.ActualWidth), isWindowFullScreen());
             commands.saveMainWindowSettings(mainWindowSettings);
         }
 
@@ -58,5 +59,29 @@ namespace Polygons
         {
             return this.WindowState == WindowState.Maximized ? true : false;
         }
+
+        protected void setupMainWindowSettings()
+        {
+            MainWindowSettings mainWindowSettings = commands.loadMainWindowSettings();
+            if(mainWindowSettings != null)
+            {
+                setupMainWindowParameters(mainWindowSettings);
+            }
+        }
+
+        private void setupMainWindowParameters(MainWindowSettings mainWindowSettings)
+        {
+            if (mainWindowSettings.fullScreen == true)
+            {
+                this.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                this.Width = mainWindowSettings.width;
+                this.Height = mainWindowSettings.height;
+            }
+        }
+
+
     }
 }
