@@ -102,3 +102,15 @@ C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\obj\Debug\.netcoreapp,ver
 C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\obj\Debug\.netcoreapp,version=v3.1\PolygonsTests.dll
 C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\obj\Debug\.netcoreapp,version=v3.1\PolygonsTests.pdb
 C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\obj\Debug\.netcoreapp,version=v3.1\PolygonsTests.genruntimeconfig.cache
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\EntityFramework.SqlServer.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\EntityFramework.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\Nancy.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\System.Data.SqlClient.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\runtimes\win-x64\native\sni.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\runtimes\win-x86\native\sni.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\albma\Desktop\Polygons\Polygons\PolygonsTests\bin\Debug\.netcoreapp,version=v3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

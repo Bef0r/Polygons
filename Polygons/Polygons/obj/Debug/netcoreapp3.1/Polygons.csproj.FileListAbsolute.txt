@@ -20,3 +20,17 @@ C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygo
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.pdb
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.genruntimeconfig.cache
 C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.Resources.MainWindowStrings.resources
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\Nancy.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\obj\Debug\netcoreapp3.1\Polygons.csproj.CopyComplete
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\albma\Desktop\Polygons\Polygons\Polygons\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
