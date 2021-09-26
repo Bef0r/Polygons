@@ -126,6 +126,9 @@
   <data name="NumberOfVerticesOfPolygonLabelText" xml:space="preserve">
     <value>Csúcsok száma</value>
   </data>
+  <data name="StorageButtonContent" xml:space="preserve">
+    <value>Tárolás</value>
+  </data>
   <data name="WindowTitle" xml:space="preserve">
     <value>Polygons</value>
   </data>
