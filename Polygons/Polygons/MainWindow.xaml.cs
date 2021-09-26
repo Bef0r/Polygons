@@ -63,7 +63,7 @@ namespace Polygons
         protected void setupMainWindowSettings()
         {
             MainWindowSettings mainWindowSettings = commands.loadMainWindowSettings();
-            if(mainWindowSettings != null)
+            if (mainWindowSettings != null)
             {
                 setupMainWindowParameters(mainWindowSettings);
             }
