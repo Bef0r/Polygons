@@ -6,14 +6,14 @@ namespace Polygons.Business_Logics.CoordinateSystem
 {
     public class DistanceBetweenTwoPoint
     {
-        public static double calculateDistanceBetweenTwoPoint(int firstPointXCoordiante, int firstPointYCoordiante, int secondPointXCoordiante, int secondPointYCoordiante)
+        public static double calculateDistanceBetweenTwoPoint(double firstPointXCoordiante, double firstPointYCoordiante, double secondPointXCoordiante, double secondPointYCoordiante)
         {
             return Math.Sqrt(subtractionAndPow(firstPointXCoordiante, secondPointXCoordiante) + subtractionAndPow(firstPointYCoordiante, secondPointYCoordiante));
         }
 
-        protected static double subtractionAndPow(int firstCoordiante, int secondCoordiante)
+        protected static double subtractionAndPow(double firstCoordiante, double secondCoordiante)
         {
-            return Math.Pow((Convert.ToDouble(secondCoordiante) - Convert.ToDouble(firstCoordiante)), 2);
+            return Math.Pow((secondCoordiante - firstCoordiante), 2);
         }
 
     }
