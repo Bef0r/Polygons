@@ -29,6 +29,11 @@ namespace Polygons.Business_Logics
             return new CanvasViewModel(canvas);
         }
 
+        public MainWindowSettings loadMainWindowSettings()
+        {
+            return saveAndLoad.loadMainWindowSettings();
+        }
+
         public bool saveMainWindowSettings(MainWindowSettings mainWindowSettings)
         {
             return saveAndLoad.saveMainWindowSettings(mainWindowSettings);
