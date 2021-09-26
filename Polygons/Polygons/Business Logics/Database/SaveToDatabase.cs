@@ -67,20 +67,21 @@ namespace Polygons.Business_Logics.Database
 
         }
 
-        public void saveToDatabase(int numberOfVerticesOfPolygon, int district)
+        public void saveToDatabase(int numberOfVerticesOfPolygon, double district)
         {
             SqlCommand com = new SqlCommand(createSqlQuqery(numberOfVerticesOfPolygon, district), connection);
             com.ExecuteReader();
         }
 
-        protected String createSqlQuqery(int numberOfVerticesOfPolygon, int district)
+        protected String createSqlQuqery(int numberOfVerticesOfPolygon, double district)
         {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append("INSERT INTO Polygon (NumberOfVerticesOfPolygon, District ) VALUES('");
+            stringBuilder.Append("INSERT INTO Polygon (NumberOfVerticesOfPolygon, District ) VALUES (");
             stringBuilder.Append(numberOfVerticesOfPolygon);
-            stringBuilder.Append("', '");
-            stringBuilder.Append(district);
-            stringBuilder.Append("')");
+            stringBuilder.Append(", ");
+            String districtInStringForm = district.ToString();
+            stringBuilder.Append(districtInStringForm.Replace(',', '.'));
+            stringBuilder.Append(")");
             return stringBuilder.ToString();
         }
     }
