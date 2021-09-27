@@ -41,27 +41,44 @@ namespace Polygons.Business_Logics
             return saveAndLoad.loadMainWindowSettings();
         }
 
+        public bool saveDistrictOfPolygonsAndNumberOfVerticesOfPolygons()
+        {
+            return saveAndLoad.saveDistrictOfPolygonsAndNumberOfVerticesOfPolygons();
+        }
+
         public bool saveMainWindowSettings(MainWindowSettings mainWindowSettings)
         {
             return saveAndLoad.saveMainWindowSettings(mainWindowSettings);
         }
 
-        public bool storageData()
+        public bool saveDataToDatabase()
         {
-            double sum = 0;
             LinkedList<PointCollection> allPoints = storage.getAllPoint();
-            foreach (PointCollection point in allPoints)
+            SaveToDatabase database = SaveToDatabase.getInstance();
+            if (database.connectToDataBase())
             {
-                for (int i = 0; i < point.Count-1; i++)
+                foreach (PointCollection point in allPoints)
                 {
-                    sum = DistanceBetweenTwoPoint.calculateDistanceBetweenTwoPoint(point[i].X, point[i].Y, point[i+1].X, point[i+1].Y);
+                    double distance = DistanceCalculator.calculate(point);
+                    database.saveToDatabase(point.Count, distance);
                 }
-                SaveToDatabase database = SaveToDatabase.getInstance();
-                database.connectToDataBase();
-                database.saveToDatabase(point.Count,sum);
+                closeDatabase(database);
+                return true;
+            }
+            else
+            {
+                closeDatabase(database);
+                return false;
+            }
+
+        }
+
+        protected void closeDatabase(SaveToDatabase database)
+        {
+            if (database.isConnected())
+            {
                 database.disconnectFromoDataBase();
             }
-            return true ;
         }
     }
 }
