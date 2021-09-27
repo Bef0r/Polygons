@@ -1,4 +1,6 @@
 ﻿using Polygons.Models;
+using System.Collections.Generic;
+using System.Windows.Media;
 
 namespace Polygons.Business_Logics.SaveAndLoadFile
 {
@@ -6,5 +8,7 @@ namespace Polygons.Business_Logics.SaveAndLoadFile
     {
         bool saveMainWindowSettings(MainWindowSettings mainWindowSettings1);
         MainWindowSettings loadMainWindowSettings();
+
+        bool saveDistrictOfPolygonsAndNumberOfVerticesOfPolygons();
     }
 }
