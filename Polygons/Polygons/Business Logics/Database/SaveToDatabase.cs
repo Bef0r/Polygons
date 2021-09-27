@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Text;
 
 namespace Polygons.Business_Logics.Database
@@ -39,13 +40,13 @@ namespace Polygons.Business_Logics.Database
         {
             try
             {
-                String conn = @"Server=(localdb)\MSSQLLocalDB;Database=Polygon";
+                String local = Path.Combine(Environment.CurrentDirectory);
+                String conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + local + @"\Database.mdf;Integrated Security=True;";
                 connection = new SqlConnection(conn);
                 connection.Open();
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-
                 return false;
             }
             return true;
@@ -60,7 +61,6 @@ namespace Polygons.Business_Logics.Database
             }
             catch (Exception)
             {
-
                 return false;
             }
             return true;
@@ -70,7 +70,8 @@ namespace Polygons.Business_Logics.Database
         public void saveToDatabase(int numberOfVerticesOfPolygon, double district)
         {
             SqlCommand com = new SqlCommand(createSqlQuqery(numberOfVerticesOfPolygon, district), connection);
-            com.ExecuteReader();
+            SqlDataReader rdr = com.ExecuteReader();
+            rdr.Close();
         }
 
         protected String createSqlQuqery(int numberOfVerticesOfPolygon, double district)
