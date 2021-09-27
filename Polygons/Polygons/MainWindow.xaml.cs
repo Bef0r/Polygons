@@ -4,7 +4,9 @@ using Polygons.Models;
 using Polygons.Models.Polygons;
 using Polygons.ViewModels;
 using System;
+using System.Text;
 using System.Windows;
+using System.Windows.Media;
 
 namespace Polygons
 {
@@ -26,7 +28,7 @@ namespace Polygons
             if (InputChecker.NumberOfVerticesOfPolygonChecker(polygonVertexTextBox.Text))
             {
                 clearInputErrorTextOnUI();
-                CanvasViewModel canvasViewmodel = commands.generateNewPolygon(new NewPolygonParameters(Convert.ToInt32(this.myCanvas.ActualWidth), Convert.ToInt32(this.myCanvas.ActualHeight), Convert.ToInt32(polygonVertexTextBox.Text))); ;
+                CanvasViewModel canvasViewmodel = commands.generateNewPolygon(new NewPolygonParameters(Converter.doubleToInteger(this.myCanvas.ActualWidth), Converter.doubleToInteger(this.myCanvas.ActualHeight), Converter.stringToInteger(polygonVertexTextBox.Text))); ;
                 this.myCanvas.Children.Add(canvasViewmodel.myCanvas);
             }
             else
@@ -37,6 +39,7 @@ namespace Polygons
 
         private void showInputErrorTextOnUI()
         {
+            this.MainWindowErrorLabel.Foreground = Brushes.Red;
             this.MainWindowErrorLabel.Text = Polygons.Resources.MainWindowStrings.InvalidInputFromMainWindow;
         }
 
@@ -84,7 +87,31 @@ namespace Polygons
 
         private void storageButton_Click(object sender, RoutedEventArgs e)
         {
-            commands.storageData();
+            if (commands.storageData())
+            {
+                this.MainWindowErrorLabel.Foreground = Brushes.Green;
+                this.MainWindowErrorLabel.Text = Polygons.Resources.MainWindowStrings.DatabaseSaveSuccessful;
+            }
+            else
+            {
+                this.MainWindowErrorLabel.Foreground = Brushes.Red;
+                this.MainWindowErrorLabel.Text = Polygons.Resources.MainWindowStrings.DatabaseSaveFail;
+            }
+
+            StringBuilder stringBuilder = new StringBuilder(this.MainWindowErrorLabel.Text);
+            stringBuilder.Append('\n');
+            if (commands.saveDistrictOfPolygonsAndNumberOfVerticesOfPolygons())
+            {
+                this.MainWindowErrorLabel.Foreground = Brushes.Green;
+                stringBuilder.Append(Polygons.Resources.MainWindowStrings.FileWriteSuccessful);
+                this.MainWindowErrorLabel.Text = stringBuilder.ToString();
+            }
+            else
+            {
+                this.MainWindowErrorLabel.Foreground = Brushes.Red;
+                stringBuilder.Append(Polygons.Resources.MainWindowStrings.FileWriteSuccessful);
+                this.MainWindowErrorLabel.Text = stringBuilder.ToString();
+            }
         }
     }
 }
