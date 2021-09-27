@@ -1,0 +1,3 @@
+Csúcsok száma: 3,Kerület összege: 604,3920788880237
+Csúcsok száma: 4,Kerület összege: 710,2561546440431
+

@@ -3,7 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Polygons"
+        xmlns:local="clr-namespace:Polygons" xmlns:resources="clr-namespace:Polygons.Resources"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{x:Static resources:MainWindowStrings.WindowTitle}" Height="450" Width="800" MinWidth="500" MinHeight="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" MinWidth="140" MaxWidth="200" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="289*" />
+        </Grid.RowDefinitions>
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Grid.RowSpan = "5" />
+        <Label x:Name="numberOfVerticesOfPolygonLabel" Content="{x:Static resources:MainWindowStrings.NumberOfVerticesOfPolygonLabelText}" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,28" Height="26" Grid.RowSpan="2" Width="89" />
+        <TextBox x:Name="polygonVertexTextBox" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="119" Height="18"/>
+        <Button x:Name="DrawPolygonButton" Content="{x:Static resources:MainWindowStrings.CreatePoligonButtonContent}" Margin="10,10,0,0" Grid.Row="2" Click="DrawPolygonButton_Click" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Width="119" />
+        <Canvas x:Name="myCanvas" Grid.Column="2" Grid.Row="0" Grid.RowSpan = "5"/>
+        <TextBlock x:Name="MainWindowErrorLabel" HorizontalAlignment="Left" Margin="10,19,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="116" Text="" Foreground="#FFF10808"/>
+        <Button x:Name="storageButton" Content="{x:Static resources:MainWindowStrings.StorageButtonContent}" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Center" Width="119" Height="20" Click="storageButton_Click"/>
+    </Grid>
 </Window>
