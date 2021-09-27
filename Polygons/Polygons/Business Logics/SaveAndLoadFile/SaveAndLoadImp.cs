@@ -1,17 +1,21 @@
 ﻿using Nancy.Json;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Polygons.Business_Logics.CoordinateSystem;
 using Polygons.Models;
+using Polygons.Models.Polygons;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Windows.Media;
 
 namespace Polygons.Business_Logics.SaveAndLoadFile
 {
     class SaveAndLoadImp : ISaveAndLoad
     {
         protected const String FILE_NAME = "settings.txt";
+        protected const String DATA_FILE_NAME = "data.txt";
         public MainWindowSettings loadMainWindowSettings()
         {
             try
@@ -27,6 +31,33 @@ namespace Polygons.Business_Logics.SaveAndLoadFile
 
         }
 
+        public bool saveDistrictOfPolygonsAndNumberOfVerticesOfPolygons()
+        {
+            bool isFileWriteSuccessful = true;
+            StreamWriter outputFile = null;
+            try
+            {
+                String local = Path.Combine(Environment.CurrentDirectory);
+                using (outputFile = new StreamWriter(Path.Combine(local, DATA_FILE_NAME)))
+                {
+                    PolygonsDistrictAndNumberOfVerticesOfPolygonCalculator generatePolygonsStorage = new PolygonsDistrictAndNumberOfVerticesOfPolygonCalculator(GeneratePolygonsStorage.getInstance().getAllPoint());
+                    outputFile.WriteLine(generatePolygonsStorage.ToString());
+                }
+            }
+            catch (Exception)
+            {
+                isFileWriteSuccessful = false;
+            }
+            finally
+            {
+                if (outputFile != null)
+                {
+                    outputFile.Close();
+                }
+            }
+            return isFileWriteSuccessful;
+        }
+
         public bool saveMainWindowSettings(MainWindowSettings mainWindowSettings)
         {
             bool isFileWriteSuccessful = true;
@@ -35,7 +66,7 @@ namespace Polygons.Business_Logics.SaveAndLoadFile
             {
                 writeSettingsToFile(ref mainWindowSettings, ref outputFile);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isFileWriteSuccessful = false;
             }
