@@ -70,7 +70,43 @@ namespace Polygons.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hibás input, az input csak szám lehet és nagyobb kettőnél.
+        ///   Looks up a localized string similar to Mentés adatbázisba sikertelen!.
+        /// </summary>
+        public static string DatabaseSaveFail {
+            get {
+                return ResourceManager.GetString("DatabaseSaveFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mentés adatbázisba sikeres!.
+        /// </summary>
+        public static string DatabaseSaveSuccessful {
+            get {
+                return ResourceManager.GetString("DatabaseSaveSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A fájl írás sikertelen!.
+        /// </summary>
+        public static string FileWriteFail {
+            get {
+                return ResourceManager.GetString("FileWriteFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A fájl írás sikeres!.
+        /// </summary>
+        public static string FileWriteSuccessful {
+            get {
+                return ResourceManager.GetString("FileWriteSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hibás input, az input csak szám lehet és nagyobb kettőnél és kisebb mint 501.
         /// </summary>
         public static string InvalidInputFromMainWindow {
             get {

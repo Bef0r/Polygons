@@ -120,8 +120,20 @@
   <data name="CreatePoligonButtonContent" xml:space="preserve">
     <value>Létrehozás</value>
   </data>
+  <data name="DatabaseSaveFail" xml:space="preserve">
+    <value>Mentés adatbázisba sikertelen!</value>
+  </data>
+  <data name="DatabaseSaveSuccessful" xml:space="preserve">
+    <value>Mentés adatbázisba sikeres!</value>
+  </data>
+  <data name="FileWriteFail" xml:space="preserve">
+    <value>A fájl írás sikertelen!</value>
+  </data>
+  <data name="FileWriteSuccessful" xml:space="preserve">
+    <value>A fájl írás sikeres!</value>
+  </data>
   <data name="InvalidInputFromMainWindow" xml:space="preserve">
-    <value>Hibás input, az input csak szám lehet és nagyobb kettőnél</value>
+    <value>Hibás input, az input csak szám lehet és nagyobb kettőnél és kisebb mint 501</value>
   </data>
   <data name="NumberOfVerticesOfPolygonLabelText" xml:space="preserve">
     <value>Csúcsok száma</value>
