@@ -87,7 +87,7 @@ namespace Polygons
 
         private void storageButton_Click(object sender, RoutedEventArgs e)
         {
-            if (commands.storageData())
+            if (commands.saveDataToDatabase())
             {
                 this.MainWindowErrorLabel.Foreground = Brushes.Green;
                 this.MainWindowErrorLabel.Text = Polygons.Resources.MainWindowStrings.DatabaseSaveSuccessful;
