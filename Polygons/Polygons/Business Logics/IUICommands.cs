@@ -7,6 +7,6 @@ namespace Polygons.Business_Logics
     interface IUICommands :ISaveAndLoad
     {
         CanvasViewModel generateNewPolygon(NewPolygonParameters newPolygonParameters);
-        bool storageData();
+        bool saveDataToDatabase();
     }
 }
