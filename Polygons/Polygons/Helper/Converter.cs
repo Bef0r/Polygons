@@ -8,12 +8,27 @@ namespace Polygons.Helper
     {
         public static int doubleToInteger(double value)
         {
-            return Convert.ToInt32(value);
+            try
+            {
+                return Convert.ToInt32(value);
+            }
+            catch (FormatException)
+            {
+                throw;
+            }
+
         }
 
         public static int stringToInteger(String value)
         {
-            return Convert.ToInt32(value);
+            try
+            {
+                return Convert.ToInt32(value);
+            }
+            catch (FormatException)
+            {
+                throw;
+            }
         }
     }
 }
