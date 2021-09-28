@@ -7,20 +7,20 @@ using System.Text;
 
 namespace Polygons.Business_Logics.Database
 {
-    class SaveToDatabase
+    class DatabaseContext
     {
         private SqlConnection connection;
-        private static SaveToDatabase database;
+        private static DatabaseContext database;
 
-        private SaveToDatabase()
+        private DatabaseContext()
         {
         }
 
-        public static SaveToDatabase getInstance()
+        public static DatabaseContext getInstance()
         {
             if (database == null)
             {
-                database = new SaveToDatabase();
+                database = new DatabaseContext();
             }
             return database;
         }
@@ -36,6 +36,7 @@ namespace Polygons.Business_Logics.Database
                 return false;
             }
         }
+
         public bool connectToDataBase()
         {
             try

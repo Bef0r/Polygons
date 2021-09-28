@@ -21,6 +21,7 @@ namespace Polygons.Business_Logics
     {
         private ISaveAndLoad saveAndLoad;
         private GeneratePolygonsStorage storage;
+
         public UICommandsImp()
         {
             saveAndLoad = new SaveAndLoadImp();
@@ -54,7 +55,7 @@ namespace Polygons.Business_Logics
         public bool saveDataToDatabase()
         {
             LinkedList<PointCollection> allPoints = storage.getAllPoint();
-            SaveToDatabase database = SaveToDatabase.getInstance();
+            DatabaseContext database = DatabaseContext.getInstance();
             if (database.connectToDataBase())
             {
                 foreach (PointCollection point in allPoints)
@@ -73,7 +74,7 @@ namespace Polygons.Business_Logics
 
         }
 
-        protected void closeDatabase(SaveToDatabase database)
+        protected void closeDatabase(DatabaseContext database)
         {
             if (database.isConnected())
             {

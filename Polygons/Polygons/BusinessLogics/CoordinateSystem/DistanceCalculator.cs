@@ -9,19 +9,17 @@ namespace Polygons.Business_Logics.CoordinateSystem
     {
         public static double calculate(PointCollection point)
         {
-            double distance = calculateAllDistanceBetweenFirstAndLastPointsExceptBetweenFirstAndLastPoints(point);
-            distance = distance + calculateDistanceBetweenFirstAndLastPoints(point);
-            return distance;
+            return calculateDistance(point);
         }
 
-        protected static double calculateAllDistanceBetweenFirstAndLastPointsExceptBetweenFirstAndLastPoints(PointCollection point)
+        protected static double calculateDistance(PointCollection point)
         {
             double distance = 0;
-            distance = 0;
             for (int i = 0; i < point.Count - 1; i++)
             {
                 distance = distance + DistanceBetweenTwoPoint.calculateDistanceBetweenTwoPoint(point[i].X, point[i].Y, point[i + 1].X, point[i + 1].Y);
             }
+            distance = distance + calculateDistanceBetweenFirstAndLastPoints(point);
             return distance;
         }
 
