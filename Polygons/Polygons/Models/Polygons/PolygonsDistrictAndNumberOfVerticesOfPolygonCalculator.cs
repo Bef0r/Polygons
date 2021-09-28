@@ -37,10 +37,10 @@ namespace Polygons.Models.Polygons
             {
                 stringBuilder.Append("Csúcsok száma: ");
 
-                stringBuilder.Append(myPolygon.NumberOfVerticesOfPolygon);
+                stringBuilder.Append(myPolygon.numberOfVerticesOfPolygon);
                 stringBuilder.Append(",");
                 stringBuilder.Append("Kerület összege: ");
-                stringBuilder.Append(myPolygon.District);
+                stringBuilder.Append(myPolygon.district);
                 stringBuilder.Append('\n');
             }
             return stringBuilder.ToString();
