@@ -8,7 +8,7 @@ namespace Polygons.Models.Shapes
     {
         private const int DEFAULT_MAXIMUM_X_COORDINATE = 450;
         private const int DEFAULT_MAXIMUM_Y_COORDINATE = 250;
-        private const int DEFAULT_MARGIN__VALUE = 10;
+        private const int DEFAULT_MARGIN_VALUE = 10;
 
         private int maximumXCoordinateValue;
         private int maximumYCoordinateValue;
@@ -23,21 +23,21 @@ namespace Polygons.Models.Shapes
             this.numberOfVerticesOfPolygon = numberOfVerticesOfPolygon;
             maximumXCoordinateValue = DEFAULT_MAXIMUM_X_COORDINATE;
             maximumYCoordinateValue = DEFAULT_MAXIMUM_Y_COORDINATE;
-            minimumXCoordinateValue = DEFAULT_MARGIN__VALUE;
-            minimumYCoordinateValue = DEFAULT_MARGIN__VALUE;
+            minimumXCoordinateValue = DEFAULT_MARGIN_VALUE;
+            minimumYCoordinateValue = DEFAULT_MARGIN_VALUE;
         }
 
 
         #region setters
         public PolygonGenerator setMaximumXAxisValue(int maximumXValue)
         {
-            this.maximumXCoordinateValue = maximumXValue - DEFAULT_MARGIN__VALUE;
+            this.maximumXCoordinateValue = maximumXValue - DEFAULT_MARGIN_VALUE;
             return this;
         }
 
         public PolygonGenerator setMaximumYAxisValue(int maximumYValue)
         {
-            this.maximumYCoordinateValue = maximumYValue - DEFAULT_MARGIN__VALUE;
+            this.maximumYCoordinateValue = maximumYValue - DEFAULT_MARGIN_VALUE;
             return this;
         }
 
@@ -55,7 +55,6 @@ namespace Polygons.Models.Shapes
         }
 
 
-        #region generateNewPoint
         protected Point generateNewPointToPolygon()
         {
             return new Point(generateNewXCoordinate(), generateNewYCoordinate());
@@ -71,8 +70,6 @@ namespace Polygons.Models.Shapes
         {
             return coordinateGenerator.Next(minimumYCoordinateValue, maximumYCoordinateValue);
         }
-        #endregion
-
         #endregion
 
         protected void setPolygonParameters(ref Polygon polygon)
