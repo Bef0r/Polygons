@@ -10,6 +10,7 @@ namespace Polygons.Models.Polygons
     {
         private static LinkedList<PointCollection> pointsOfPolygons;
         private static GeneratePolygonsStorage storage;
+
         private GeneratePolygonsStorage()
         {
             pointsOfPolygons = new LinkedList<PointCollection>();
