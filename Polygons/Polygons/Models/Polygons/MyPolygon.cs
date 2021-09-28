@@ -6,27 +6,13 @@ namespace Polygons.Models.Polygons
 {
     class MyPolygon
     {
-        protected double district;
-        protected int numberOfVerticesOfPolygon;
+        public double district { get; }
+        public int numberOfVerticesOfPolygon { get; }
+
         public MyPolygon(double district, int numberOfVerticesOfPolygon)
         {
             this.district = district;
             this.numberOfVerticesOfPolygon = numberOfVerticesOfPolygon;
-        }
-
-        public double District
-        {
-            get
-            {
-                return district;
-            }
-        }
-        public int NumberOfVerticesOfPolygon
-        {
-            get
-            {
-                return numberOfVerticesOfPolygon;
-            }
         }
     }
 }
