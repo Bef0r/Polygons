@@ -9,24 +9,54 @@ namespace Polygons.Helper
         static int convertedValueToInt;
         static int MINIMUM_VALUE = 2;
         static int MAXIMUM_VALUE = 501;
-        public static Boolean NumberOfVerticesOfPolygonChecker(String input)
+
+        public static bool NumberOfVerticesOfPolygonChecker(String input)
         {
-            return (isNumber(input) && isInputBiggerThanTwo() && isInputSmallerThanFiveHundred()) ? true : false;
+            try
+            {
+                return (isNumber(input) && isInputBiggerThanMinimum() && isInputSmallerThanMaximum()) ? true : false;
+            }
+            catch (FormatException)
+            {
+                throw;
+            }
         }
 
-        protected static Boolean isNumber(String input)
+        protected static bool isNumber(String input)
         {
-            return int.TryParse(input, out convertedValueToInt);
+            try
+            {
+                return int.TryParse(input, out convertedValueToInt);
+            }
+            catch (FormatException)
+            {
+                throw;
+            }
 
         }
-        protected static Boolean isInputBiggerThanTwo()
+
+        protected static bool isInputBiggerThanMinimum()
         {
-            return (convertedValueToInt > MINIMUM_VALUE) ? true : false;
+            try
+            {
+                return convertedValueToInt > MINIMUM_VALUE;
+            }
+            catch (FormatException)
+            {
+                throw;
+            }
         }
 
-        protected static Boolean isInputSmallerThanFiveHundred()
+        protected static bool isInputSmallerThanMaximum()
         {
-            return (convertedValueToInt <= MAXIMUM_VALUE) ? true : false;
+            try
+            {
+                return convertedValueToInt <= MAXIMUM_VALUE;
+            }
+            catch (FormatException)
+            {
+                throw;
+            }
         }
     }
 }
